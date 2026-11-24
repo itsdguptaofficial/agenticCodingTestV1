@@ -22,6 +22,8 @@
         <a href="#programs" class="nav-link">Programs</a>
         <a href="#curriculum" class="nav-link">Curriculum</a>
         <a href="#internships" class="nav-link">Internships</a>
+        <a href="#calculator" class="nav-link">ROI Calculator</a>
+        <a href="#refund" class="nav-link">Refund Policy</a>
         <a href="#mentors" class="nav-link">Mentors</a>
         <a href="#campus" class="nav-link">Campuses</a>
         <a href="#faqs" class="nav-link">FAQs</a>
@@ -395,6 +397,118 @@
       </div>
     </section>
 
+    <!-- Interactive ROI & Stipend Offset Calculator -->
+    <section id="calculator" class="section section-border">
+      <div class="container">
+        <span class="brand-badge">INTERACTIVE RETURN ON INVESTMENT</span>
+        <h2 class="section-title" style="margin-top: var(--space-4);">Calculate Your Degree ROI</h2>
+        <p class="section-subtitle">See how 18 months of corporate stipends directly recover your educational investment before graduation.</p>
+
+        <div class="cg-calc-grid">
+          <!-- Controls Column -->
+          <div class="card cg-calc-controls">
+            <h3 class="card-title" style="font-size: var(--font-size-lg); margin-bottom: var(--space-6);">Simulation Parameters</h3>
+            
+            <!-- Monthly Stipend Slider -->
+            <div class="slider-group" style="margin-bottom: var(--space-6);">
+              <div class="slider-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+                <label for="roi-stipend-slider" class="form-label" style="margin-bottom: 0;">Expected Monthly Stipend</label>
+                <div class="value-display" id="roi-stipend-val">&#8377; 25,000</div>
+              </div>
+              <input type="range" id="roi-stipend-slider" min="15000" max="50000" step="2500" value="25000" class="range-slider" style="width: 100%;">
+              <div class="slider-limits" style="display: flex; justify-content: space-between; font-size: var(--font-size-xs); color: var(--color-text-muted);">
+                <span>&#8377;15,000/mo</span>
+                <span>&#8377;50,000/mo</span>
+              </div>
+            </div>
+
+            <!-- Internship Months Slider -->
+            <div class="slider-group">
+              <div class="slider-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+                <label for="roi-months-slider" class="form-label" style="margin-bottom: 0;">Internship Duration</label>
+                <div class="value-display" id="roi-months-val">18 Months</div>
+              </div>
+              <input type="range" id="roi-months-slider" min="6" max="18" step="6" value="18" class="range-slider" style="width: 100%;">
+              <div class="slider-limits" style="display: flex; justify-content: space-between; font-size: var(--font-size-xs); color: var(--color-text-muted);">
+                <span>6 Months</span>
+                <span>18 Months</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Summary Column -->
+          <div class="cg-calc-results">
+            <div class="cg-roi-metric">
+              <div class="cg-roi-label">TOTAL STIPEND EARNED DURING DEGREE</div>
+              <div class="cg-roi-val cg-roi-highlight" id="roi-earned-val">&#8377; 4,50,000</div>
+            </div>
+
+            <div class="cg-roi-metric">
+              <div class="cg-roi-label">ESTIMATED 4-YEAR TUITION FEE</div>
+              <div class="cg-roi-val" style="color: var(--color-text-secondary);">&#8377; 6,50,000</div>
+            </div>
+
+            <div class="cg-roi-metric" style="border-top: 1px solid var(--color-border-subtle); padding-top: var(--space-4);">
+              <div class="cg-roi-label">NET EFFECTIVE DEGREE INVESTMENT</div>
+              <div class="cg-roi-val" id="roi-net-val">&#8377; 2,00,000</div>
+            </div>
+
+            <div class="cg-roi-bar-wrapper">
+              <div style="display: flex; justify-content: space-between; font-size: var(--font-size-xs); margin-bottom: var(--space-2);">
+                <span>Tuition Recovered Prior to Graduation:</span>
+                <strong id="roi-pct-val" style="color: #22c55e;">69%</strong>
+              </div>
+              <div class="ratio-bar-container" style="background-color: var(--color-border); height: 8px; border-radius: 4px; overflow: hidden;">
+                <div id="roi-bar" style="width: 69%; height: 100%; background-color: #22c55e; transition: width 0.3s ease;"></div>
+              </div>
+              <p class="card-text" style="font-size: var(--font-size-xs); margin-top: var(--space-3); margin-bottom: 0;">
+                First-Year Post-Graduation Starting CTC: <strong>&#8377;6,00,000 minimum guaranteed</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 100% Refund Policy Section -->
+    <section id="refund" class="section section-border">
+      <div class="container">
+        <span class="brand-badge">NO PLACEMENT, NO FEES</span>
+        <h2 class="section-title" style="margin-top: var(--space-4);">100% Tuition Fee Refund Guarantee Terms</h2>
+        <p class="section-subtitle">Complete institutional accountability backed by verified contractual guarantees.</p>
+
+        <div class="cg-refund-grid">
+          <div class="cg-refund-card">
+            <h3 class="card-title">&#8377;6 LPA Minimum Package</h3>
+            <p class="card-text">
+              If an eligible graduate does not secure a job offer of at least &#8377;6,00,000 annual CTC within 6 months of graduation, CodingGita refunds 100% of CodingGita fees (excluding GST).
+            </p>
+          </div>
+
+          <div class="cg-refund-card">
+            <h3 class="card-title">80% Attendance Benchmark</h3>
+            <p class="card-text">
+              Students must maintain an attendance record of at least 80% across each academic semester and actively participate in mandatory corporate internship sessions.
+            </p>
+          </div>
+
+          <div class="cg-refund-card">
+            <h3 class="card-title">Portfolio & Capstone Delivery</h3>
+            <p class="card-text">
+              Students must build and deploy at least 10 production-grade applications to public repositories and complete their final Semester 8 capstone project.
+            </p>
+          </div>
+
+          <div class="cg-refund-card">
+            <h3 class="card-title">Interview Participation</h3>
+            <p class="card-text">
+              Students must attend placement interview drives and mock assessments arranged with CodingGita’s 100+ technology hiring partner network.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Mentors & Faculty Section -->
     <section id="mentors" class="section section-border">
       <div class="container">
@@ -627,6 +741,8 @@
         <a href="#programs" class="nav-link">Programs</a>
         <a href="#curriculum" class="nav-link">Curriculum</a>
         <a href="#internships" class="nav-link">Internships</a>
+        <a href="#calculator" class="nav-link">ROI Calculator</a>
+        <a href="#refund" class="nav-link">Refund Policy</a>
         <a href="#mentors" class="nav-link">Mentors</a>
         <a href="#campus" class="nav-link">Campuses</a>
         <a href="../index.html" class="nav-link">&larr; Return to Portfolio</a>

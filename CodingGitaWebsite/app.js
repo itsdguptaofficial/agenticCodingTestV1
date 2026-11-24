@@ -1,6 +1,7 @@
 /**
  * CodingGita Clone Application Script
- * Handles light/dark theme switching, curriculum tab switching, FAQ accordion, and inquiry submission.
+ * Handles light/dark theme switching, curriculum tab switching, FAQ accordion,
+ * interactive ROI calculator, and inquiry submission.
  */
 
 (function () {
@@ -90,7 +91,49 @@
     });
   });
 
-  // 4. Admission Form Client-Side Validation and Feedback
+  // 4. Interactive ROI & Stipend Offset Calculator
+  const stipendSlider = document.getElementById('roi-stipend-slider');
+  const monthsSlider = document.getElementById('roi-months-slider');
+  const stipendVal = document.getElementById('roi-stipend-val');
+  const monthsVal = document.getElementById('roi-months-val');
+  const earnedVal = document.getElementById('roi-earned-val');
+  const netVal = document.getElementById('roi-net-val');
+  const pctVal = document.getElementById('roi-pct-val');
+  const roiBar = document.getElementById('roi-bar');
+
+  function formatINR(val) {
+    const rounded = Math.round(val);
+    return '₹ ' + rounded.toLocaleString('en-IN');
+  }
+
+  function updateROICalculator() {
+    if (!stipendSlider || !monthsSlider) return;
+
+    const monthly = parseFloat(stipendSlider.value);
+    const months = parseInt(monthsSlider.value, 10);
+    const estimatedTuition = 650000;
+
+    const totalEarned = monthly * months;
+    const netCost = Math.max(0, estimatedTuition - totalEarned);
+    const percentage = Math.min(100, Math.round((totalEarned / estimatedTuition) * 100));
+
+    if (stipendVal) stipendVal.textContent = formatINR(monthly);
+    if (monthsVal) monthsVal.textContent = months + ' Months';
+    if (earnedVal) earnedVal.textContent = formatINR(totalEarned);
+    if (netVal) netVal.textContent = formatINR(netCost);
+    if (pctVal) pctVal.textContent = percentage + '%';
+    if (roiBar) roiBar.style.width = percentage + '%';
+  }
+
+  if (stipendSlider && monthsSlider) {
+    [stipendSlider, monthsSlider].forEach((slider) => {
+      slider.addEventListener('input', updateROICalculator);
+      slider.addEventListener('change', updateROICalculator);
+    });
+    updateROICalculator();
+  }
+
+  // 5. Admission Form Client-Side Validation and Feedback
   const form = document.getElementById('cg-admission-form');
   const feedback = document.getElementById('form-feedback');
 
@@ -119,7 +162,7 @@
     });
   }
 
-  // 5. Modal / Quick Apply button scrolling
+  // 6. Modal / Quick Apply button scrolling
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
   openModalBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
