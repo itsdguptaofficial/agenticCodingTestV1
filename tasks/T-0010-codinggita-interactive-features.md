@@ -3,7 +3,7 @@
 - ID: T-0010
 - Title: CodingGita Refund Policy and Interactive Features
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0010-codinggita-interactive-features
 
 ## Scope
@@ -19,8 +19,8 @@ List all files that this task will create or edit:
 - `CodingGitaWebsite/app.js`
 
 ## Acceptance Criteria
-- [ ] Add the transparent 100 percent fee refund guarantee section.
-- [ ] Build an interactive Net ROI calculator showing tuition offset by internship stipends.
-- [ ] Connect the dark and light mode toggle to update all page components.
-- [ ] Validate responsive behavior across desktop and mobile viewports.
-- [ ] Pass the documentation checker script.
+- [x] Add the transparent 100 percent fee refund guarantee section.
+- [x] Build an interactive Net ROI calculator showing tuition offset by internship stipends.
+- [x] Connect the dark and light mode toggle to update all page components.
+- [x] Validate responsive behavior across desktop and mobile viewports.
+- [x] Pass the documentation checker script.
