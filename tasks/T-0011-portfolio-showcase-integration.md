@@ -3,7 +3,7 @@
 - ID: T-0011
 - Title: Portfolio Showcase Integration
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0011-portfolio-showcase-integration
 
 ## Scope
@@ -18,8 +18,8 @@ List all files that this task will create or edit:
 - `projects.html`
 
 ## Acceptance Criteria
-- [ ] Add direct live demo links for the SIP Visualizer application.
-- [ ] Add direct live demo links for the CodingGita Clone website.
-- [ ] Update featured project cards on `index.html`.
-- [ ] Update comprehensive project grid on `projects.html`.
-- [ ] Pass the documentation checker script.
+- [x] Add direct live demo links for the SIP Visualizer application.
+- [x] Add direct live demo links for the CodingGita Clone website.
+- [x] Update featured project cards on `index.html`.
+- [x] Update comprehensive project grid on `projects.html`.
+- [x] Pass the documentation checker script.
