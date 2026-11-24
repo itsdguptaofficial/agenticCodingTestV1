@@ -1,0 +1,31 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and Secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Build and Dependency Directories
+node_modules/
+dist/
+build/
+
+# ASD-STE100 Official Standard PDF (must not be committed)
+*.pdf
+ASD-STE100*
+asd-ste100*
+
+# Temporary and Scratch Files
+tmp/
+temp/
+*.log
