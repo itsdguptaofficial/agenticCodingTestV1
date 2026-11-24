@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive SIP Visualizer - Calculate and visualize wealth accumulation with interactive sliders and real-time graphs">
+  <title>SIP Visualizer | Wealth Growth Calculator</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="brand" aria-label="Back to Portfolio">
+        <span class="brand-badge">&larr; PORTFOLIO</span>
+        <span class="brand-title">SIP Visualizer</span>
+      </a>
+      <nav class="nav" aria-label="Visualizer Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../projects.html" class="nav-link">Projects</a>
+        <a href="#calculator" class="nav-link active" aria-current="page">Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Introduction Section -->
+    <section class="section" style="padding-bottom: var(--space-6);">
+      <div class="container">
+        <span class="brand-badge">INTERACTIVE SIMULATION</span>
+        <h1 class="hero-title" style="text-align: left; margin-top: var(--space-4);">Systematic Investment Plan Visualizer</h1>
+        <p class="hero-description" style="margin-left: 0; text-align: left; max-width: 820px;">
+          Adjust the sliders below to explore how regular monthly contributions and compound interest build wealth over time.
+          The interactive chart redraws dynamically to project your investment trajectory.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visualizer Dashboard Section -->
+    <section id="calculator" class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="visualizer-grid">
+          
+          <!-- Controls and Metric Outputs -->
+          <div class="visualizer-controls">
+            <div class="card">
+              <h2 class="card-title" style="font-size: var(--font-size-lg); margin-bottom: var(--space-6);">Investment Parameters</h2>
+              
+              <!-- Slider 1: Monthly Investment -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label for="monthly-input" class="form-label">Monthly Investment</label>
+                  <div class="value-display" id="monthly-display">&#8377; 5,000</div>
+                </div>
+                <input type="range" id="monthly-slider" min="500" max="100000" step="500" value="5000" class="range-slider" aria-label="Monthly Investment Slider">
+                <div class="slider-limits">
+                  <span>&#8377;500</span>
+                  <span>&#8377;1,00,000</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Expected Return Rate -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label for="rate-slider" class="form-label">Expected Return Rate (Annual)</label>
+                  <div class="value-display" id="rate-display">12%</div>
+                </div>
+                <input type="range" id="rate-slider" min="1" max="30" step="0.5" value="12" class="range-slider" aria-label="Expected Return Rate Slider">
+                <div class="slider-limits">
+                  <span>1%</span>
+                  <span>30%</span>
+                </div>
+              </div>
+
+              <!-- Slider 3: Time Period -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <label for="years-slider" class="form-label">Time Period</label>
+                  <div class="value-display" id="years-display">10 Years</div>
+                </div>
+                <input type="range" id="years-slider" min="1" max="35" step="1" value="10" class="range-slider" aria-label="Time Period Slider">
+                <div class="slider-limits">
+                  <span>1 Year</span>
+                  <span>35 Years</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary Results Card -->
+            <div class="card" style="margin-top: var(--space-6);">
+              <h2 class="card-title" style="font-size: var(--font-size-lg); margin-bottom: var(--space-4);">Projected Wealth Summary</h2>
+              
+              <div class="summary-metric">
+                <span class="timeline-date">INVESTED CAPITAL</span>
+                <div class="metric-value metric-subtle" id="metric-invested">&#8377; 6,00,000</div>
+              </div>
+
+              <div class="summary-metric">
+                <span class="timeline-date">ESTIMATED RETURNS</span>
+                <div class="metric-value metric-gain" id="metric-returns">&#8377; 5,61,695</div>
+              </div>
+
+              <div class="summary-metric summary-total">
+                <span class="timeline-date">TOTAL MATURITY VALUE</span>
+                <div class="metric-value metric-highlight" id="metric-total">&#8377; 11,61,695</div>
+              </div>
+
+              <!-- Visual Proportion Bar -->
+              <div class="ratio-bar-container" title="Capital vs Returns Proportion">
+                <div id="ratio-invested" class="ratio-segment ratio-invested" style="width: 52%;"></div>
+                <div id="ratio-returns" class="ratio-segment ratio-returns" style="width: 48%;"></div>
+              </div>
+              <div class="ratio-legend">
+                <span><span class="legend-dot dot-invested"></span> Invested Capital (<span id="pct-invested">52%</span>)</span>
+                <span><span class="legend-dot dot-returns"></span> Estimated Gains (<span id="pct-returns">48%</span>)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Graph Section -->
+          <div class="visualizer-chart-column">
+            <div class="card chart-card">
+              <div class="chart-header">
+                <div>
+                  <h2 class="card-title" style="font-size: var(--font-size-lg);">Growth Projection Graph</h2>
+                  <p class="card-text" style="margin-bottom: 0;">Hover across the chart to view milestone estimates.</p>
+                </div>
+                <div class="chart-legend">
+                  <span class="legend-item"><span class="legend-dot dot-invested"></span> Capital</span>
+                  <span class="legend-item"><span class="legend-dot dot-returns"></span> Total Wealth</span>
+                </div>
+              </div>
+
+              <!-- Canvas and Interactive Tooltip Overlay -->
+              <div class="canvas-container" id="chart-container">
+                <canvas id="sip-chart"></canvas>
+                <div id="chart-tooltip" class="chart-tooltip" hidden>
+                  <div class="tooltip-year" id="tooltip-year">Year 5</div>
+                  <div class="tooltip-row">
+                    <span>Invested:</span>
+                    <strong id="tooltip-invested">&#8377; 3,00,000</strong>
+                  </div>
+                  <div class="tooltip-row">
+                    <span>Total Wealth:</span>
+                    <strong id="tooltip-wealth" class="text-gain">&#8377; 4,12,432</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Milestone Breakdown Pills -->
+              <div class="milestones-container" id="milestones-row">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Formula & Explanation Section -->
+    <section class="section section-border">
+      <div class="container">
+        <h2 class="section-title">How Compounding Works</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 class="card-title">Compound Interest Formula</h3>
+            <p class="card-text">
+              The calculator computes monthly compound interest using the standard future value formula for an annuity due.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Rupee Cost Averaging</h3>
+            <p class="card-text">
+              Periodic investments reduce the effect of market volatility by purchasing more units when prices dip.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Long-Term Compounding</h3>
+            <p class="card-text">
+              Growth accelerates significantly over extended horizons as accumulated gains generate their own returns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-text">&copy; 2026 Divyansh Gupta. All rights reserved.</p>
+      <nav class="nav" aria-label="Footer Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../projects.html" class="nav-link">Projects</a>
+        <a href="index.html" class="nav-link active">SIP Visualizer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
