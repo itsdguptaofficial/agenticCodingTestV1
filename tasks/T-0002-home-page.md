@@ -3,7 +3,7 @@
 - ID: T-0002
 - Title: Home Page Layout and Content
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0002-home-page
 
 ## Scope
@@ -16,7 +16,7 @@ List all files that this task will create or edit:
 - `index.html`
 
 ## Acceptance Criteria
-- [ ] Implement a responsive hero section with clear headline text.
-- [ ] Display three featured project preview cards.
-- [ ] Link navigation items to about, projects, and contact pages.
-- [ ] Validate HTML markup against HTML5 standards.
+- [x] Implement a responsive hero section with clear headline text.
+- [x] Display three featured project preview cards.
+- [x] Link navigation items to about, projects, and contact pages.
+- [x] Validate HTML markup against HTML5 standards.
