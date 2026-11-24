@@ -3,7 +3,7 @@
 - ID: T-0004
 - Title: Projects Showcase Page
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0004-projects-page
 
 ## Scope
@@ -16,7 +16,7 @@ List all files that this task will create or edit:
 - `projects.html`
 
 ## Acceptance Criteria
-- [ ] Create `projects.html` with valid HTML5 semantic structure.
-- [ ] Implement a multi-column responsive grid for project cards.
-- [ ] Include external links with proper security attributes.
-- [ ] Pass the documentation checker script.
+- [x] Create `projects.html` with valid HTML5 semantic structure.
+- [x] Implement a multi-column responsive grid for project cards.
+- [x] Include external links with proper security attributes.
+- [x] Pass the documentation checker script.

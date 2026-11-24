@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects - Portfolio of engineering projects, tools, and systems by Divyansh Gupta">
+  <title>Projects | Divyansh Gupta</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand" aria-label="Portfolio Home">
+        <span class="brand-badge">PORTFOLIO</span>
+        <span class="brand-title">Divyansh Gupta</span>
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Header Section -->
+    <section class="section">
+      <div class="container">
+        <span class="brand-badge">PORTFOLIO SHOWCASE</span>
+        <h1 class="hero-title" style="text-align: left; margin-top: var(--space-4);">Projects & Systems</h1>
+        <p class="hero-description" style="margin-left: 0; text-align: left; max-width: 800px;">
+          A collection of software engineering architectures, developer tooling, and user interface systems.
+          All projects emphasize clean code, zero runtime bloat, and strict technical documentation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Grid Section -->
+    <section class="section section-border">
+      <div class="container">
+        <h2 class="section-title">All Engineering Works</h2>
+        <p class="section-subtitle">Detailed breakdown of active prototypes and repositories.</p>
+
+        <div class="grid grid-2">
+          <!-- Project 1 -->
+          <article id="agentic-blueprint" class="card card--interactive">
+            <div>
+              <h3 class="card-title">Agentic Dev Blueprint</h3>
+              <p class="timeline-subtitle">Autonomous Team Environment</p>
+              <p class="card-text">
+                Multi-agent collaboration blueprint with structured governance rules, mandatory human approval checkpoints, and task branch isolation.
+                Eliminates divergence across different AI coding models.
+              </p>
+              <div class="tag-group">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Python</span>
+                <span class="tag">ASD-STE100</span>
+                <span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/itsdguptaofficial/agenticCodingTestV1" class="card-link" target="_blank" rel="noopener">Source Code &rarr;</a>
+              <span class="brand-badge">ACTIVE</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article id="design-system" class="card card--interactive">
+            <div>
+              <h3 class="card-title">Monochrome Token System</h3>
+              <p class="timeline-subtitle">Zero-Dependency CSS Architecture</p>
+              <p class="card-text">
+                Modern high-contrast design system featuring modular 4px and 8px spacing scales, mobile-first breakpoints, and complete WCAG 2.1 AA accessibility.
+                Requires zero CSS preprocessors or bundlers.
+              </p>
+              <div class="tag-group">
+                <span class="tag">CSS Custom Properties</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">WCAG 2.1 AA</span>
+                <span class="tag">Design Tokens</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="index.html" class="card-link">Live Example &rarr;</a>
+              <span class="brand-badge">SHIPPED</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article id="doc-verifier" class="card card--interactive">
+            <div>
+              <h3 class="card-title">STE Documentation Validator</h3>
+              <p class="timeline-subtitle">Controlled Language Linter</p>
+              <p class="card-text">
+                Heuristic validation script built with the Python standard library.
+                Detects banned modal verbs, checks sentence word counts against procedural and descriptive limits, and validates YAML triggers in rule files.
+              </p>
+              <div class="tag-group">
+                <span class="tag">Python 3</span>
+                <span class="tag">Regex</span>
+                <span class="tag">CI/CD Linter</span>
+                <span class="tag">STE-style</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/itsdguptaofficial/agenticCodingTestV1/blob/main/scripts/check_docs.py" class="card-link" target="_blank" rel="noopener">View Script &rarr;</a>
+              <span class="brand-badge">TESTED</span>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article id="workflow-engine" class="card card--interactive">
+            <div>
+              <h3 class="card-title">Task File Branch Workflow</h3>
+              <p class="timeline-subtitle">Concurrency Management Pattern</p>
+              <p class="card-text">
+                A structured task specification protocol that records every file touched prior to editing.
+                Guarantees zero merge collisions between human developers and concurrent AI agent workers.
+              </p>
+              <div class="tag-group">
+                <span class="tag">Git Workflow</span>
+                <span class="tag">Task Tracking</span>
+                <span class="tag">Team Collaboration</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/itsdguptaofficial/agenticCodingTestV1/tree/main/tasks" class="card-link" target="_blank" rel="noopener">Task Directory &rarr;</a>
+              <span class="brand-badge">DOCUMENTED</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section section-border">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Interested in Collaborating?</h2>
+        <p class="hero-description" style="margin-left: auto; margin-right: auto;">
+          Check out my background details or reach out through the contact form.
+        </p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Send a Message</a>
+          <a href="about.html" class="btn btn-secondary">Read My Story</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p class="footer-text">&copy; 2026 Divyansh Gupta. All rights reserved.</p>
+      <nav class="nav" aria-label="Footer Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
