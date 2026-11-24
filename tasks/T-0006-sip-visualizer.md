@@ -3,7 +3,7 @@
 - ID: T-0006
 - Title: Interactive SIP Visualizer Application
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0006-sip-visualizer
 
 ## Scope
@@ -21,9 +21,9 @@ List all files that this task will create or edit:
 - `sip-visualizer/app.js`
 
 ## Acceptance Criteria
-- [ ] Create the `sip-visualizer/` folder structure.
-- [ ] Provide interactive sliders with immediate numeric feedback.
-- [ ] Render an interactive growth chart using HTML5 Canvas.
-- [ ] Display formatted currency metrics for invested capital, returns, and maturity value.
-- [ ] Ensure full keyboard accessibility for all slider controls.
-- [ ] Pass the documentation checker script.
+- [x] Create the `sip-visualizer/` folder structure.
+- [x] Provide interactive sliders with immediate numeric feedback.
+- [x] Render an interactive growth chart using HTML5 Canvas.
+- [x] Display formatted currency metrics for invested capital, returns, and maturity value.
+- [x] Ensure full keyboard accessibility for all slider controls.
+- [x] Pass the documentation checker script.
