@@ -3,7 +3,7 @@
 - ID: T-0007
 - Title: CodingGita Website Clone
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0007-codinggita-clone
 
 ## Scope
@@ -22,9 +22,9 @@ List all files that this task will create or edit:
 - `CodingGitaWebsite/app.js`
 
 ## Acceptance Criteria
-- [ ] Create the `CodingGitaWebsite/` directory structure.
-- [ ] Build a responsive hero section with key outcome statistics.
-- [ ] Implement an interactive semester curriculum switcher in JavaScript.
-- [ ] Implement an interactive FAQ accordion.
-- [ ] Add an application inquiry form with client validation.
-- [ ] Pass the documentation checker script.
+- [x] Create the `CodingGitaWebsite/` directory structure.
+- [x] Build a responsive hero section with key outcome statistics.
+- [x] Implement an interactive semester curriculum switcher in JavaScript.
+- [x] Implement an interactive FAQ accordion.
+- [x] Add an application inquiry form with client validation.
+- [x] Pass the documentation checker script.
