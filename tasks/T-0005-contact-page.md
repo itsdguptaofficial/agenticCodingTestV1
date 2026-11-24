@@ -3,7 +3,7 @@
 - ID: T-0005
 - Title: Contact Page and Form Structure
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0005-contact-page
 
 ## Scope
@@ -16,7 +16,7 @@ List all files that this task will create or edit:
 - `contact.html`
 
 ## Acceptance Criteria
-- [ ] Create `contact.html` with valid HTML5 markup.
-- [ ] Include accessible form fields with explicit labels and placeholders.
-- [ ] Provide links to GitHub, LinkedIn, and email address.
-- [ ] Comply with WCAG 2.1 AA keyboard focus requirements.
+- [x] Create `contact.html` with valid HTML5 markup.
+- [x] Include accessible form fields with explicit labels and placeholders.
+- [x] Provide links to GitHub, LinkedIn, and email address.
+- [x] Comply with WCAG 2.1 AA keyboard focus requirements.
