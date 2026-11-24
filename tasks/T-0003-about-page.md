@@ -3,7 +3,7 @@
 - ID: T-0003
 - Title: About Page Layout and Content
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0003-about-page
 
 ## Scope
@@ -16,7 +16,7 @@ List all files that this task will create or edit:
 - `about.html`
 
 ## Acceptance Criteria
-- [ ] Create `about.html` with valid HTML5 semantic tags.
-- [ ] Display an experience timeline section with job roles and dates.
-- [ ] List technical skills using clean badge elements.
-- [ ] Match the monochrome design system.
+- [x] Create `about.html` with valid HTML5 semantic tags.
+- [x] Display an experience timeline section with job roles and dates.
+- [x] List technical skills using clean badge elements.
+- [x] Match the monochrome design system.
