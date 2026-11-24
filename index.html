@@ -3,84 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="agenticCodingTestV1 - Test environment and blueprint for agentic software development">
-  <title>agenticCodingTestV1</title>
+  <meta name="description" content="Divyansh Gupta - Software Engineer and Agentic Systems Developer Portfolio">
+  <title>Divyansh Gupta | Portfolio</title>
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-container">
-      <div class="brand">
-        <span class="brand-badge">PROTOTYPE</span>
-        <h1 class="brand-title">agenticCodingTestV1</h1>
-      </div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#architecture" class="nav-link">Architecture</a>
-        <a href="#docs" class="nav-link">Docs</a>
+      <a href="index.html" class="brand" aria-label="Portfolio Home">
+        <span class="brand-badge">PORTFOLIO</span>
+        <span class="brand-title">Divyansh Gupta</span>
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="main-content">
+    <!-- Hero Section -->
     <section id="hero" class="section hero">
       <div class="container">
-        <h2 class="hero-title">Predictable Development with AI Agents</h2>
+        <span class="brand-badge">AVAILABLE FOR WORK</span>
+        <h1 class="hero-title">Crafting Reliable Software and Autonomous Agent Systems</h1>
         <p class="hero-description">
-          A blueprint for human-agent collaboration.
-          Built with semantic HTML5 and vanilla CSS3.
-          Zero build steps, zero runtime dependencies, and strict ASD-STE100 writing standards.
+          Software engineer focused on deterministic AI architectures, clean web engineering, and high-performance interfaces.
+          Built with pure standards, zero runtime dependencies, and strict ASD-STE100 clarity.
         </p>
         <div class="hero-actions">
-          <a href="https://github.com/itsdguptaofficial/agenticCodingTestV1" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository</a>
-          <a href="#docs" class="btn btn-secondary">Read Documentation</a>
+          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+          <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="section section-border">
       <div class="container">
-        <h3 class="section-title">Core Principles</h3>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Selected engineering works and architectural prototypes.</p>
+        
+        <div class="grid grid-3">
+          <!-- Project Card 1 -->
+          <article class="card card--interactive">
+            <div>
+              <h3 class="card-title">Agentic Dev Blueprint</h3>
+              <p class="card-text">
+                Multi-agent collaboration environment with automated writing checks and deterministic approval gates.
+              </p>
+              <div class="tag-group">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">STE-style</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="projects.html#agentic-blueprint" class="card-link">View Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="card card--interactive">
+            <div>
+              <h3 class="card-title">Monochrome Design System</h3>
+              <p class="card-text">
+                Minimalist, high-contrast token architecture delivering WCAG 2.1 AA accessibility with zero CSS dependencies.
+              </p>
+              <div class="tag-group">
+                <span class="tag">CSS Tokens</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">WCAG AA</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="projects.html#design-system" class="card-link">View Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="card card--interactive">
+            <div>
+              <h3 class="card-title">Automated Doc Verifier</h3>
+              <p class="card-text">
+                Heuristic validation suite that enforces simplified technical english, sentence length limits, and modal bans.
+              </p>
+              <div class="tag-group">
+                <span class="tag">Python</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">CI/CD</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="projects.html#doc-verifier" class="card-link">View Details &rarr;</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-actions" style="margin-top: var(--space-8);">
+          <a href="projects.html" class="btn btn-secondary">View All Projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Areas Section -->
+    <section id="expertise" class="section section-border">
+      <div class="container">
+        <h2 class="section-title">Core Areas of Expertise</h2>
+        <p class="section-subtitle">Disciplines and methodologies applied across every project.</p>
+
         <div class="grid grid-3">
           <div class="card">
-            <h4 class="card-title">Controlled English</h4>
+            <h3 class="card-title">Autonomous Coding Agents</h3>
             <p class="card-text">
-              All project documentation and comments use simplified technical English for maximum clarity and zero ambiguity.
+              Configuring scoped execution boundaries, task file workflows, and repeatable test patterns for AI agents.
             </p>
           </div>
+
           <div class="card">
-            <h4 class="card-title">Deterministic Agent Rules</h4>
+            <h3 class="card-title">Lean Web Engineering</h3>
             <p class="card-text">
-              Modular agent rules in <code class="code-inline">.agents/rules/</code> trigger automatically based on task context and touched files.
+              Developing lightweight static interfaces with semantic HTML5 and modern CSS custom property architectures.
             </p>
           </div>
+
           <div class="card">
-            <h4 class="card-title">Lean Static Stack</h4>
+            <h3 class="card-title">Technical Communication</h3>
             <p class="card-text">
-              Pure HTML5 and CSS3 deliver maximum cost efficiency, instant load speeds, and zero runtime dependency overhead.
+              Writing unambiguous documentation and task instructions governed by ASD-STE100 principles.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="architecture" class="section section-border">
-      <div class="container">
-        <h3 class="section-title">Project Control Files</h3>
-        <div class="grid grid-2">
-          <div class="card">
-            <h4 class="card-title">Agent Governance</h4>
-            <p class="card-text">
-              <code class="code-inline">AGENTS.md</code> defines mandatory approval gates, context limits, and task checkpoints.
-            </p>
-          </div>
-          <div class="card">
-            <h4 class="card-title">Automated Verification</h4>
-            <p class="card-text">
-              A lightweight Python validator runs locally and in GitHub Actions to enforce writing limits and rule integrity.
-            </p>
-          </div>
+    <!-- Call to Action Section -->
+    <section id="cta" class="section section-border">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Ready to Collaborate?</h2>
+        <p class="hero-description" style="margin-left: auto; margin-right: auto;">
+          Open for software engineering opportunities, agent system architecture, and technical consultation.
+        </p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+          <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
         </div>
       </div>
     </section>
@@ -88,7 +158,13 @@
 
   <footer class="site-footer">
     <div class="container footer-container">
-      <p class="footer-text">&copy; 2026 itsdguptaofficial. Released under the MIT License.</p>
+      <p class="footer-text">&copy; 2026 Divyansh Gupta. All rights reserved.</p>
+      <nav class="nav" aria-label="Footer Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
   </footer>
 </body>
