@@ -3,7 +3,7 @@
 - ID: T-0001
 - Title: Shared Layout and Component Styles
 - Owner: itsdguptaofficial
-- Status: Planned
+- Status: Done
 - Branch: feat/T-0001-shared-layout-styles
 
 ## Scope
@@ -17,7 +17,7 @@ List all files that this task will create or edit:
 - `css/styles.css`
 
 ## Acceptance Criteria
-- [ ] Add consistent header and footer classes across viewports.
-- [ ] Add styling for form controls, buttons, and badges.
-- [ ] Maintain WCAG 2.1 AA color contrast for all components.
-- [ ] Pass the documentation checker script.
+- [x] Add consistent header and footer classes across viewports.
+- [x] Add styling for form controls, buttons, and badges.
+- [x] Maintain WCAG 2.1 AA color contrast for all components.
+- [x] Pass the documentation checker script.
