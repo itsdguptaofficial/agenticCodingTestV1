@@ -29,3 +29,5 @@ asd-ste100*
 tmp/
 temp/
 *.log
+__pycache__/
+*.pyc

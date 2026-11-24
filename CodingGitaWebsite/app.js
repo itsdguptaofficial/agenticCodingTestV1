@@ -1,12 +1,42 @@
 /**
  * CodingGita Clone Application Script
- * Handles curriculum tab switching, FAQ accordion toggling, and application submission.
+ * Handles light/dark theme switching, curriculum tab switching, FAQ accordion, and inquiry submission.
  */
 
 (function () {
   'use strict';
 
-  // 1. Interactive Curriculum Tab Switcher
+  // 1. Light and Dark Theme Engine
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('cg-theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('cg-theme', theme);
+    if (themeIcon) {
+      themeIcon.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
+    }
+  }
+
+  // Initialize theme
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const nextTheme = current === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
+
+  // 2. Interactive Curriculum Tab Switcher
   const tabButtons = document.querySelectorAll('.cg-tab-btn');
   const tabPanes = document.querySelectorAll('.cg-tab-pane');
 
@@ -35,7 +65,7 @@
     });
   });
 
-  // 2. Interactive FAQ Accordion
+  // 3. Interactive FAQ Accordion
   const faqItems = document.querySelectorAll('.cg-faq-item');
 
   faqItems.forEach((item) => {
@@ -60,7 +90,7 @@
     });
   });
 
-  // 3. Admission Form Client-Side Validation and Feedback
+  // 4. Admission Form Client-Side Validation and Feedback
   const form = document.getElementById('cg-admission-form');
   const feedback = document.getElementById('form-feedback');
 
@@ -89,7 +119,7 @@
     });
   }
 
-  // 4. Modal / Quick Apply button scrolling
+  // 5. Modal / Quick Apply button scrolling
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
   openModalBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
